@@ -1,7 +1,11 @@
 export interface IThemeProps {
   primaryColor: string;
+  onPrimaryColor: string;
   secondaryColor: string;
   onSecondaryColor: string;
+  tertiaryColor: string;
+  onTertiaryColor: string;
+  borderOnTertiaryColor: string;
   borderLineColor: string;
   borderLineActiveColor: string;
   fontColor: string;
@@ -9,9 +13,13 @@ export interface IThemeProps {
 }
 
 export const theme: IThemeProps = {
-  primaryColor: '#ff',
+  primaryColor: '#fff',
+  onPrimaryColor: '#1d1d1d',
   secondaryColor: '#fcc346',
   onSecondaryColor: '#0e0e0e',
+  tertiaryColor: '#f7ddd1',
+  onTertiaryColor: ' #1d1d1d',
+  borderOnTertiaryColor: '#e8d1c6',
   borderLineColor: '#f3f3f3',
   borderLineActiveColor: '#fcc346',
   fontColor: '#0e0e0e',
