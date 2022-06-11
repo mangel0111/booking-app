@@ -3,7 +3,13 @@ import styled from 'styled-components';
 
 export const DetailsContainer = styled.div`
   height: 100%;
-  background: ${({ theme }) => theme.tertiaryColor};
+  background: linear-gradient(
+    to bottom,
+    ${({ theme }) => theme.tertiaryColor} 0%,
+    ${({ theme }) => theme.tertiaryColor} 80%,
+    #fff 80%,
+    #fff 100%
+  );
   padding: 60px 20px;
   text-align: center;
   color: ${({ theme }) => theme.onTertiaryColor};
@@ -23,7 +29,7 @@ export const SpecificDetails = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.borderOnTertiaryColor};
   border-top: 1px solid ${({ theme }) => theme.borderOnTertiaryColor};
   width: max-content;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 
   span {
     font-size: 14px;
