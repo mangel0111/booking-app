@@ -50,9 +50,9 @@ export const CurrentPositionIndex = styled.div`
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  width: 2.4em;
-  height: 2.4em;
-  line-height: 2.4em;
+  width: 2.8em;
+  height: 2.8em;
+  line-height: 2.6em;
   position: absolute;
   top: 48%;
   right: 30px;

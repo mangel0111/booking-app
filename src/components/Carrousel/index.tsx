@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react';
+import { FC, useState } from 'react';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import {
   CarrouselContainer,
@@ -6,7 +6,7 @@ import {
   CarrouselItem,
   CurrentPositionIndex,
   MoveButton,
-} from './CarrouselDetails';
+} from './CarrouselStyled';
 
 interface ICarrouselProps {
   items?: string[];
@@ -20,7 +20,7 @@ const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
       <CarrouselInner activeIndex={activeIndex}>
         {items.map(id => (
           <CarrouselItem key={id}>
-            <img src={id} />
+            <img src={`${id}?w=925&ar=2:1`} />
           </CarrouselItem>
         ))}
       </CarrouselInner>

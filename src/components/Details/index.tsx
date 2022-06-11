@@ -8,6 +8,7 @@ import {
   DetailsLine,
   SpecificDetails,
 } from './DetailsStyled';
+import { getEnvironmentVariable } from 'src/utilities/environment';
 
 interface DetailsProps {
   id: string;
@@ -19,9 +20,14 @@ const Details: FC = () => {
 
   useEffect(() => {
     const retrieveDetails = async () => {
-      const response = await fetch(import.meta.env.VITE_DETAILS_SERVICE_URL);
+      const response = await fetch(
+        getEnvironmentVariable('VITE_DETAILS_SERVICE_URL')
+      );
       const detailsData: DetailsProps = await response.json();
-      setDetails(detailsData);
+      setDetails({
+        id: detailsData.id,
+        imageUrls: detailsData.imageUrls.slice(0, 30),
+      });
     };
     retrieveDetails().catch(error =>
       console.error('Error retrieving data', error)
