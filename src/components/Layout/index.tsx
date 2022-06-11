@@ -1,5 +1,6 @@
 import { FC, ReactElement } from 'react';
 import styled from 'styled-components';
+import Header from 'src/components/Header';
 
 const LayoutContainer = styled.div``;
 
@@ -8,7 +9,12 @@ interface ILayoutProps {
 }
 
 const Layout: FC<ILayoutProps> = ({ children }) => {
-  return <LayoutContainer>{children}</LayoutContainer>;
+  return (
+    <LayoutContainer>
+      <Header />
+      {children}
+    </LayoutContainer>
+  );
 };
 
 export default Layout;
