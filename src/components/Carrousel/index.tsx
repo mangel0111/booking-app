@@ -1,5 +1,6 @@
-import { FC, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import { useSwipeable } from 'react-swipeable';
 import {
   CarrouselContainer,
   CarrouselInner,
@@ -15,8 +16,20 @@ interface ICarrouselProps {
 const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const moveLeft = useCallback(
+    () => activeIndex > 0 && setActiveIndex(activeIndex - 1),
+    [activeIndex]
+  );
+  const moveRight = useCallback(
+    () => activeIndex < items.length - 1 && setActiveIndex(activeIndex + 1),
+    [activeIndex, items]
+  );
+  const handlers = useSwipeable({
+    onSwipedLeft: moveRight,
+    onSwipedRight: moveLeft,
+  });
   return (
-    <CarrouselContainer data-testid="carrousel-container">
+    <CarrouselContainer data-testid="carrousel-container" {...handlers}>
       <CarrouselInner activeIndex={activeIndex}>
         {items.map((url, index) => (
           <CarrouselItem
@@ -30,7 +43,7 @@ const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
       <MoveButton
         data-testid="carrousel-button-left"
         direction="left"
-        onClick={() => setActiveIndex(activeIndex - 1)}
+        onClick={moveLeft}
         disabled={activeIndex <= 0}
       >
         <BsArrowLeft />
@@ -38,7 +51,7 @@ const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
       <MoveButton
         data-testid="carrousel-button-right"
         direction="right"
-        onClick={() => setActiveIndex(activeIndex + 1)}
+        onClick={moveRight}
         disabled={activeIndex >= items.length - 1}
       >
         <BsArrowRight />
