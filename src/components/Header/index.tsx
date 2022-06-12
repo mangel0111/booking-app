@@ -13,20 +13,29 @@ import {
 
 const Header: FC = () => {
   return (
-    <HeaderContainer>
+    <HeaderContainer data-testid="header-container">
       <Menu />
-      <HeaderLinksContainer>
+      <HeaderLinksContainer data-testid="header-links">
         <HeaderLinkItem isCurrent>HOME</HeaderLinkItem>
         <HeaderLinkItem>HOSTS</HeaderLinkItem>
       </HeaderLinksContainer>
       <HeaderLogo>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img
+          src={logo}
+          data-testid="header-logo"
+          className="App-logo"
+          alt="logo"
+        />
       </HeaderLogo>
-      <HeaderActions>
-        <HeaderActionItem>Need help?</HeaderActionItem>
-        <HeaderActionItem>Login</HeaderActionItem>
+      <HeaderActions data-testid="header-actions">
+        <HeaderActionItem data-testid="header-link-needs-help">
+          Need help?
+        </HeaderActionItem>
+        <HeaderActionItem data-testid="header-link-login">
+          Login
+        </HeaderActionItem>
         <HeaderActionItem>
-          <BiSearch />
+          <BiSearch data-testid="header-link-search" />
         </HeaderActionItem>
       </HeaderActions>
     </HeaderContainer>

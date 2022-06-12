@@ -9,7 +9,7 @@ const MenuContainer = styled.div`
 
 const Menu: FC = () => {
   return (
-    <MenuContainer>
+    <MenuContainer data-testid="menu-container">
       <FcMenu size={'20px'} />
     </MenuContainer>
   );

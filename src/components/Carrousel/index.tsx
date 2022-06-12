@@ -16,15 +16,19 @@ const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <CarrouselContainer>
+    <CarrouselContainer data-testid="carrousel-container">
       <CarrouselInner activeIndex={activeIndex}>
-        {items.map(id => (
-          <CarrouselItem key={id}>
-            <img src={`${id}?w=925&ar=2:1`} />
+        {items.map((url, index) => (
+          <CarrouselItem
+            key={`carrousel-key-${index}`}
+            data-testid={`carrousel-item-${index}`}
+          >
+            <img src={`${url}?w=925&ar=2:1`} />
           </CarrouselItem>
         ))}
       </CarrouselInner>
       <MoveButton
+        data-testid="carrousel-button-left"
         direction="left"
         onClick={() => setActiveIndex(activeIndex - 1)}
         disabled={activeIndex <= 0}
@@ -32,6 +36,7 @@ const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
         <BsArrowLeft />
       </MoveButton>
       <MoveButton
+        data-testid="carrousel-button-right"
         direction="right"
         onClick={() => setActiveIndex(activeIndex + 1)}
         disabled={activeIndex >= items.length - 1}
@@ -39,7 +44,7 @@ const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
         <BsArrowRight />
       </MoveButton>
       {items.length > 0 && (
-        <CurrentPositionIndex>
+        <CurrentPositionIndex data-testid="carrousel-position-info">
           {activeIndex + 1}/{items.length}
         </CurrentPositionIndex>
       )}

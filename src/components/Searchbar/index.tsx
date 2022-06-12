@@ -13,6 +13,7 @@ const Searchbar: FC = () => {
       <SearchBarItems>
         <SearchBarItem>
           <Input
+            id="from-to"
             label="From / To"
             type="date"
             defaultValue={new Date().toLocaleDateString('en-US', {
@@ -23,16 +24,22 @@ const Searchbar: FC = () => {
           />
         </SearchBarItem>
         <SearchBarItem>
-          <Input label="For" placeholder="2 Guests" />
+          <Input label="For" id="for" placeholder="2 Guests" />
         </SearchBarItem>
         <SearchBarItem>
-          <Input label="$ Per night" placeholder="345" />
+          <Input label="$ Per night" id="price" placeholder="345" />
         </SearchBarItem>
         <SearchBarItem>
-          <Input label="$ total per 54 nights" placeholder="18.360" />
+          <Input
+            label="$ total per 54 nights"
+            id="nights"
+            placeholder="18.360"
+          />
         </SearchBarItem>
         <SearchBarItem shouldFillLine>
-          <ButtonInput>INSTANT BOOKING</ButtonInput>
+          <ButtonInput data-testid="searchbar-instant-booking-button">
+            INSTANT BOOKING
+          </ButtonInput>
         </SearchBarItem>
       </SearchBarItems>
     </SearchbarContainer>

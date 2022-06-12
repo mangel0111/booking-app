@@ -10,7 +10,7 @@ interface ILayoutProps {
 
 const Layout: FC<ILayoutProps> = ({ children }) => {
   return (
-    <LayoutContainer>
+    <LayoutContainer data-testid="layout-container">
       <Header />
       {children}
     </LayoutContainer>

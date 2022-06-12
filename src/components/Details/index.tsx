@@ -35,15 +35,15 @@ const Details: FC = () => {
   }, []);
 
   return (
-    <DetailsContainer>
+    <DetailsContainer data-testid="details-container">
       <Title>Monsieur Didot</Title>
-      <DetailsLine>
+      <DetailsLine data-testid="basic-details-info">
         <span>4 people</span>
         <span>2 bedrooms</span>
         <span>Private terrasse</span>
         <span>Peaceful</span>
       </DetailsLine>
-      <SpecificDetails>
+      <SpecificDetails data-testid="specific-details-info">
         <span>
           <IoLocationOutline />
           Nothing Hill, London

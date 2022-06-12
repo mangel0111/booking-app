@@ -10,7 +10,7 @@ const jestConfig: Config.InitialOptions = {
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/src/test/__mocks__/fileMock.js',
     '^src/(.*)$': '<rootDir>/src/$1',
   },
-  setupFiles: ['<rootDir>/jest.setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
 
 export default jestConfig;
