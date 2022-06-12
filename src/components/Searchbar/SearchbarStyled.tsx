@@ -8,6 +8,7 @@ export const SearchBarItems = styled.div`
   display: flex;
   margin: 20px auto;
   flex-wrap: wrap;
+  justify-content: center;
 
   > div:not(:last-child) {
     border-right: 1px solid ${({ theme }) => theme.borderLineColor};

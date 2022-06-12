@@ -24,6 +24,7 @@ export const CarrouselItem = styled.div`
   img {
     height: 500px;
     width: 100%;
+    object-fit: cover;
   }
 `;
 
