@@ -19,7 +19,8 @@ interface ISearchBarItem {
 }
 
 export const SearchBarItem = styled.div<ISearchBarItem>`
-  max-width: 300px;
+  max-width: 250px;
+  min-width: 180px;
   padding: 10px 20px;
 
   ${({ shouldFillLine }) =>

@@ -1,9 +1,10 @@
-import { FC } from 'react';
+import { ChangeEventHandler, FC } from 'react';
 import { InputContainer, InputField, InputLabel } from './InputStyled';
 
 interface IInputProps extends React.HTMLProps<HTMLInputElement> {
   label: string;
   id?: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
 const Input: FC<IInputProps> = ({
@@ -13,6 +14,8 @@ const Input: FC<IInputProps> = ({
   defaultValue,
   value,
   id,
+  onChange,
+  readOnly,
 }) => {
   return (
     <InputContainer>
@@ -23,6 +26,8 @@ const Input: FC<IInputProps> = ({
         placeholder={placeholder}
         defaultValue={defaultValue}
         value={value}
+        onChange={onChange}
+        readOnly={readOnly}
       />
     </InputContainer>
   );

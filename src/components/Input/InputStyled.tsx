@@ -10,6 +10,7 @@ export const InputLabel = styled.div`
 
 export const InputField = styled.input`
   border: none;
+  width: 100%;
   font-weight: 500;
   color: ${({ theme }) => theme.fontColor};
 

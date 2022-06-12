@@ -23,7 +23,7 @@ const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
             key={`carrousel-key-${index}`}
             data-testid={`carrousel-item-${index}`}
           >
-            <img src={`${url}?w=925&ar=2:1`} />
+            <img src={`${url}?w=1000&ar=2:1`} />
           </CarrouselItem>
         ))}
       </CarrouselInner>

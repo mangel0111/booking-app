@@ -1,6 +1,5 @@
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import { FetchMock } from 'jest-fetch-mock';
-import { act } from 'react-dom/test-utils';
 import {
   mockDataWith100images,
   mockDataWith3Images,
@@ -111,6 +110,28 @@ describe('App tests', () => {
           appRendered.getByTestId('carrousel-position-info')
         ).toHaveTextContent('1/30');
       });
+    });
+  });
+  describe('Searchbar tests', () => {
+    beforeEach(() => {
+      fetchMock.resetMocks();
+      fetchMock.mockResponseOnce(
+        JSON.stringify({
+          id: '1',
+          imageUrls: mockDataWith3Images,
+        })
+      );
+    });
+    it('should recalculate total when price changes', () => {
+      const appRendered = render(<App />);
+      const priceInput = appRendered.getByTestId('input-price');
+      let totalInput = appRendered.getByTestId('input-total');
+      expect(totalInput).toHaveValue('690');
+
+      fireEvent.change(priceInput, { target: { value: 400 } });
+
+      totalInput = appRendered.getByTestId('input-total');
+      expect(totalInput).toHaveValue('800');
     });
   });
 });
