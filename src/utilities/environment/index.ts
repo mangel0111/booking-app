@@ -1,1 +1,3 @@
-export const getEnvironmentVariable = (key: string) => import.meta.env[key];
+const { env } = import.meta;
+
+export const getEnvironmentVariable = (key: string) => env[key];
