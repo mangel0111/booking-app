@@ -19,16 +19,18 @@ const Input: FC<IInputProps> = ({
 }) => {
   return (
     <InputContainer>
-      <InputLabel>{label}</InputLabel>
-      <InputField
-        data-testid={`input${id ? `-${id}` : ''}`}
-        type={type}
-        placeholder={placeholder}
-        defaultValue={defaultValue}
-        value={value}
-        onChange={onChange}
-        readOnly={readOnly}
-      />
+      <InputLabel>
+        {label}
+        <InputField
+          data-testid={`input${id ? `-${id}` : ''}`}
+          type={type}
+          placeholder={placeholder}
+          defaultValue={defaultValue}
+          value={value}
+          onChange={onChange}
+          readOnly={readOnly}
+        />
+      </InputLabel>
     </InputContainer>
   );
 };

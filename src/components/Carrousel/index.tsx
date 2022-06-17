@@ -45,6 +45,7 @@ const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
         direction="left"
         onClick={moveLeft}
         disabled={activeIndex <= 0}
+        aria-label="move-to-the-left"
       >
         <BsArrowLeft />
       </MoveButton>
@@ -53,6 +54,7 @@ const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
         direction="right"
         onClick={moveRight}
         disabled={activeIndex >= items.length - 1}
+        aria-label="move-to-the-right"
       >
         <BsArrowRight />
       </MoveButton>
