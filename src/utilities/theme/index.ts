@@ -23,7 +23,7 @@ export const theme: IThemeProps = {
   borderLineColor: '#f3f3f3',
   borderLineActiveColor: '#fcc346',
   fontColor: '#0e0e0e',
-  fontAltColor: '#7e7e81',
+  fontAltColor: '#57575a',
 };
 
 const size = {
