@@ -30,6 +30,7 @@ const Searchbar: FC = () => {
         <SearchBarItem>
           <Input
             id="from-to"
+            type="text"
             label="From / To"
             defaultValue={`${bookingInfo.from.toLocaleDateString('en-US', {
               year: 'numeric',
@@ -44,6 +45,7 @@ const Searchbar: FC = () => {
         </SearchBarItem>
         <SearchBarItem>
           <Input
+            type="text"
             label="For"
             id="guests"
             placeholder="Number of Guests"
@@ -68,6 +70,7 @@ const Searchbar: FC = () => {
         </SearchBarItem>
         <SearchBarItem>
           <Input
+            type="text"
             label="$ total per 54 nights"
             id="total"
             placeholder="Total"
@@ -76,7 +79,10 @@ const Searchbar: FC = () => {
           />
         </SearchBarItem>
         <SearchBarItem shouldFillLine>
-          <ButtonInput data-testid="searchbar-instant-booking-button">
+          <ButtonInput
+            data-testid="searchbar-instant-booking-button"
+            aria-label="instant-booking"
+          >
             INSTANT BOOKING
           </ButtonInput>
         </SearchBarItem>
