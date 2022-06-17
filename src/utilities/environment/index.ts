@@ -1,3 +1,7 @@
-const { env } = import.meta;
+import { ConfigKeys, IConfig } from 'src/models';
 
-export const getEnvironmentVariable = (key: string) => env[key];
+const config: IConfig = {
+  [ConfigKeys.SERVICE_URL]: import.meta.env.VITE_DETAILS_SERVICE_URL as string,
+};
+
+export const getEnvironmentVariable = (key: ConfigKeys) => config[key];

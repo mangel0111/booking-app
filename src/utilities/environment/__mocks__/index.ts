@@ -1,10 +1,8 @@
-interface IMockedEnv {
-  [key: string]: string;
-}
+import { ConfigKeys, IConfig } from 'src/models';
 
-const mockedEnvironmentVariables: IMockedEnv = {
-  VITE_DETAILS_SERVICE_URL: 'http://fakeserver.com/imageid',
+const mockedEnvironmentVariables: IConfig = {
+  [ConfigKeys.SERVICE_URL]: 'http://fakeserver.com/imageid',
 };
 
-export const getEnvironmentVariable = (key: string) =>
+export const getEnvironmentVariable = (key: ConfigKeys) =>
   mockedEnvironmentVariables[key];

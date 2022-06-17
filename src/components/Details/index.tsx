@@ -9,6 +9,7 @@ import {
   SpecificDetails,
 } from './DetailsStyled';
 import { getEnvironmentVariable } from 'src/utilities/environment';
+import { ConfigKeys } from 'src/models';
 
 interface DetailsProps {
   id: string;
@@ -21,7 +22,7 @@ const Details: FC = () => {
   useEffect(() => {
     const retrieveDetails = async () => {
       const response = await fetch(
-        getEnvironmentVariable('VITE_DETAILS_SERVICE_URL')
+        getEnvironmentVariable(ConfigKeys.SERVICE_URL)
       );
       const detailsData: DetailsProps = await response.json();
       setDetails({
