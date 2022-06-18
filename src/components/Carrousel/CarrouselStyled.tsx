@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const CarrouselContainer = styled.div`
   overflow: hidden;
   position: relative;
+
+  max-width: ${({ theme }) => theme.maxWidth};
+  margin: 0 auto;
 `;
 
 interface ICarrouselInnerProps {

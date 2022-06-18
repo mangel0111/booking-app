@@ -22,6 +22,7 @@ export interface IThemeProps {
   fontSizes: {
     [key in Sizes]: string;
   };
+  maxWidth: string;
 }
 
 export const theme: IThemeProps = {
@@ -44,6 +45,7 @@ export const theme: IThemeProps = {
     large: '24px',
     extraLarge: '48px',
   },
+  maxWidth: '1200px',
 };
 
 const size = {
