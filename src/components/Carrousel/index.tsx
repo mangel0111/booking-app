@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react';
+import { FC, useCallback, useMemo, useState } from 'react';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { useSwipeable } from 'react-swipeable';
 import {
@@ -12,6 +12,28 @@ import {
 interface ICarrouselProps {
   items?: string[];
 }
+
+interface ICarrouselImageProps {
+  index: number;
+  url: string;
+}
+
+const CarrouselImage: FC<ICarrouselImageProps> = ({ index, url }) => {
+  const responsiveUrlImages: string = useMemo(
+    () =>
+      [
+        `${url}?q=50&w=400 1x`,
+        `${url}?q=75&w=800 2x`,
+        `${url}?q=100&w=1200 3x`,
+      ].join(','),
+    [url]
+  );
+  return (
+    <CarrouselItem data-testid={`carrousel-item-${index}`}>
+      <img srcSet={responsiveUrlImages} alt={`imagen displayed Nº ${index}`} />
+    </CarrouselItem>
+  );
+};
 
 const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -32,15 +54,12 @@ const Carrousel: FC<ICarrouselProps> = ({ items = [] }) => {
     <CarrouselContainer data-testid="carrousel-container" {...handlers}>
       <CarrouselInner activeIndex={activeIndex}>
         {items.map((url, index) => (
-          <CarrouselItem
+          <CarrouselImage
             key={`carrousel-key-${index}`}
+            index={index}
             data-testid={`carrousel-item-${index}`}
-          >
-            <img
-              src={`${url}?w=1000&ar=2:1`}
-              alt={`imagen displayed Nº ${index}`}
-            />
-          </CarrouselItem>
+            url={url}
+          />
         ))}
       </CarrouselInner>
       <MoveButton
