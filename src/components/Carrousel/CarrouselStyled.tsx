@@ -18,17 +18,17 @@ export const CarrouselInner = styled.div<ICarrouselInnerProps>`
   transform: translateX(-${({ activeIndex }) => activeIndex * 100}%);
 `;
 
-export const CarrouselItem = styled.div`
+export const CarrouselItem = styled.picture`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+`;
 
-  img {
-    height: 500px;
-    width: 100%;
-    object-fit: cover;
-  }
+export const CarrouselImage = styled.img`
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
 `;
 
 interface IMoveButton {
