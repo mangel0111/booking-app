@@ -1,3 +1,4 @@
+import { device } from 'src/utilities/theme';
 import styled from 'styled-components';
 
 export const SearchbarContainer = styled.div`
@@ -9,10 +10,6 @@ export const SearchBarItems = styled.div`
   margin: 20px auto;
   flex-wrap: wrap;
   justify-content: center;
-
-  > div:not(:last-child) {
-    border-right: 1px solid ${({ theme }) => theme.borderLineColor};
-  }
 `;
 
 interface ISearchBarItem {
@@ -31,4 +28,21 @@ export const SearchBarItem = styled.div<ISearchBarItem>`
     justify-content: center;
     text-align: center;
 `}
+
+  &:not(:last-child) {
+    border-right: 1px solid ${({ theme }) => theme.borderLineColor};
+  }
+
+  @media ${device.mobile} {
+    width: 100%;
+    margin-bottom: 5px;
+
+    button {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      border-left: 1px solid ${({ theme }) => theme.borderLineColor};
+    }
+  }
 `;
