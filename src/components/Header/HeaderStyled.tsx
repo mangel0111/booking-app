@@ -23,13 +23,13 @@ interface IHeaderLinkItem {
 
 export const HeaderLinkItem = styled.div<IHeaderLinkItem>`
   margin: auto 10px;
-  font-size: 12px;
+  font-size: ${({ theme }) => theme.fontSizes.small};
   color: ${({ theme }) => theme.fontAltColor};
   ${({ isCurrent, theme }) =>
     isCurrent &&
     `
     border-bottom: 2px solid ${theme.borderLineActiveColor};
-    padding: 18px;
+    padding: 16px;
     color: ${theme.fontColor};
   `}
 `;

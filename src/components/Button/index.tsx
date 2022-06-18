@@ -5,7 +5,7 @@ const ButtonInput = styled.button`
   background: ${({ theme }) => theme.secondaryColor};
   color: ${({ theme }) => theme.onSecondaryColor};
   border: none;
-  font-size: 12px;
+  font-size: ${({ theme }) => theme.fontSizes.small};
   padding: 12px 20px;
   cursor: pointer;
 `;

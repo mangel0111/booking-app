@@ -20,7 +20,7 @@ export const DetailsLine = styled.div`
 
   span {
     margin: 5px 10px;
-    font-size: 12px;
+    font-size: ${({ theme }) => theme.fontSizes.small};
   }
 `;
 
@@ -32,7 +32,7 @@ export const SpecificDetails = styled.div`
   margin: 0 auto 40px;
 
   span {
-    font-size: 14px;
+    font-size: ${({ theme }) => theme.fontSizes.small};
     padding: 6px 10px;
     &:not(:last-child) {
       border-right: 1px solid ${({ theme }) => theme.borderOnTertiaryColor};
