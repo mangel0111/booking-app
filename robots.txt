@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mangel0111.github.io/booking-app/sitemap.xml

@@ -1,0 +1,9 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "BookingApp",
+    "short_name": "BookingApp",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "A friendly booking app."
+}
