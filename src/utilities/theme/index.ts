@@ -6,15 +6,19 @@ enum Sizes {
 }
 
 interface Spaicing {
+  spaceAuto: string;
   space0: string;
   space2: string;
   space4: string;
+  space6: string;
   space8: string;
   space10: string;
   space12: string;
   space16: string;
   space20: string;
   space24: string;
+  space40: string;
+  space55: string;
   space60: string;
 }
 
@@ -64,15 +68,19 @@ export const theme: IThemeProps = {
     extraLarge: '48px',
   },
   spacing: {
+    spaceAuto: 'auto',
     space0: '0px',
     space2: '2px',
-    space4: '3px',
+    space4: '4px',
+    space6: '6px',
     space8: '8px',
     space10: '10px',
     space12: '12px',
     space16: '16px',
     space20: '20px',
     space24: '24px',
+    space40: '40px',
+    space55: '55px',
     space60: '60px',
   },
   radius: {

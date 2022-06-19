@@ -17,10 +17,12 @@ export const DetailsContainer = styled.div`
 `;
 
 export const DetailsLine = styled.div`
-  margin: 5px auto 10px;
+  margin: ${({ theme }) =>
+    `${theme.spacing.space6} ${theme.spacing.spaceAuto} ${theme.spacing.space10}`};
 
   span {
-    margin: 5px 10px;
+    margin: ${({ theme }) =>
+      `${theme.spacing.space6} ${theme.spacing.space10}`};
     font-size: ${({ theme }) => theme.fontSizes.small};
   }
 `;
@@ -30,8 +32,8 @@ export const SpecificDetails = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.borderOnTertiaryColor};
   border-top: 1px solid ${({ theme }) => theme.borderOnTertiaryColor};
   width: max-content;
-  margin: 0 auto 40px;
-
+  margin: ${({ theme }) =>
+    `${theme.spacing.space0} ${theme.spacing.spaceAuto} ${theme.spacing.space40}`};
   span {
     font-size: ${({ theme }) => theme.fontSizes.small};
     padding: ${({ theme }) =>
@@ -41,7 +43,8 @@ export const SpecificDetails = styled.div`
     }
 
     svg {
-      margin: 0 4px;
+      margin: ${({ theme }) =>
+        `${theme.spacing.space0} ${theme.spacing.space4}`};
     }
   }
 
@@ -50,8 +53,10 @@ export const SpecificDetails = styled.div`
     display: flex;
 
     span {
+      width: 115px;
+
       svg {
-        margin: 0 40%;
+        margin: 5px 50%;
       }
     }
   }

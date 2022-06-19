@@ -9,7 +9,8 @@ export const HeaderMain = styled.header`
 export const HeaderContainer = styled.nav`
   display: flex;
   width: 100%;
-  margin: 0 auto;
+  margin: ${({ theme }) =>
+    `${theme.spacing.space0} ${theme.spacing.spaceAuto}`};
   height: 50px;
 
   @media ${device.desktop} {
@@ -19,7 +20,7 @@ export const HeaderContainer = styled.nav`
 
 export const HeaderLinksContainer = styled.ul`
   display: flex;
-  margin: 0 20px;
+  margin: ${({ theme }) => `${theme.spacing.space0} ${theme.spacing.space20}`};
 
   @media ${device.mobile} {
     display: none;
@@ -34,7 +35,8 @@ interface IHeaderLinkItem {
 }
 
 export const HeaderLinkItem = styled.li<IHeaderLinkItem>`
-  margin: auto 10px;
+  margin: ${({ theme }) =>
+    `${theme.spacing.spaceAuto} ${theme.spacing.space10}`};
   font-size: ${({ theme }) => theme.fontSizes.small};
   color: ${({ theme }) => theme.fontAltColor};
   list-style: none;
@@ -70,6 +72,6 @@ export const HeaderLogoContainer = styled.div`
   img {
     width: 200px;
     height: 20px;
-    margin: auto;
+    margin: ${({ theme }) => theme.spacing.spaceAuto};
   }
 `;

@@ -7,7 +7,8 @@ export const SearchbarContainer = styled.div`
 
 export const SearchBarItems = styled.div`
   display: flex;
-  margin: 20px auto;
+  margin: ${({ theme }) =>
+    `${theme.spacing.space20} ${theme.spacing.spaceAuto}`};
   flex-wrap: wrap;
   justify-content: center;
 `;
@@ -39,7 +40,8 @@ export const SearchBarItem = styled.div<ISearchBarItem>`
     margin-bottom: 5px;
     max-width: 240px;
     min-width: 240px;
-    margin: 20px 55px 0;
+    margin: ${({ theme }) =>
+      `${theme.spacing.space2} ${theme.spacing.space55}  ${theme.spacing.space0}`};
 
     button {
       width: 100%;

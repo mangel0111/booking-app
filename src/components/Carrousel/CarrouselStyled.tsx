@@ -6,7 +6,8 @@ export const CarrouselContainer = styled.div`
   position: relative;
 
   max-width: ${ScreenSize.desktop};
-  margin: 0 auto;
+  margin: ${({ theme }) =>
+    `${theme.spacing.space0} ${theme.spacing.spaceAuto}`};
 `;
 
 interface ICarrouselInnerProps {

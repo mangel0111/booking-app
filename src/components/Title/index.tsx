@@ -5,5 +5,6 @@ export const Title = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.extraLarge};
   line-height: 56px;
   font-weight: 500;
-  margin: 5px 0 25px;
+  margin: ${({ theme }) =>
+    `${theme.spacing.space4} ${theme.spacing.space0}  ${theme.spacing.space10}`};
 `;
