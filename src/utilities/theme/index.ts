@@ -22,7 +22,6 @@ export interface IThemeProps {
   fontSizes: {
     [key in Sizes]: string;
   };
-  maxWidth: string;
 }
 
 export const theme: IThemeProps = {
@@ -45,17 +44,22 @@ export const theme: IThemeProps = {
     large: '24px',
     extraLarge: '48px',
   },
-  maxWidth: '1200px',
 };
 
-const size = {
-  mobile: '460px',
-  tablet: '768px',
-  desktop: '2560px',
+export enum DeviceSize {
+  MOBILE = 460,
+  TABLET = 768,
+  DESKTOP = 1200,
+}
+
+export const ScreenSize = {
+  mobile: `${DeviceSize.MOBILE}px`,
+  tablet: `${DeviceSize.TABLET}px`,
+  desktop: `${DeviceSize.DESKTOP}px`,
 };
 
 export const device = {
-  mobile: `(max-width: ${size.mobile}) and (max-device-width: ${size.mobile})`,
-  tablet: `(min-width: ${size.tablet})`,
-  desktop: `(min-width: ${size.desktop})`,
+  mobile: `(max-width: ${ScreenSize.mobile}) and (max-device-width: ${ScreenSize.mobile})`,
+  tablet: `(min-width: ${ScreenSize.tablet})`,
+  desktop: `(min-width: ${ScreenSize.desktop})`,
 };

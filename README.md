@@ -35,6 +35,9 @@ yarn run dev
 
 ## Notes (2nd iteration)
 
-- To be accesible, labels for the inputs, aria for the buttons, alts for the images, and semantic html was updated to be compliant with a11y.
+- To be accesible, labels for the inputs, aria for the buttons, alts for the images, and semantic html were updated to be compliant with a11y.
 - To pass the contrast test some colors were updated.
 - SEO also was improved adding robots.txt, sitemap.xml and the manifest.json.
+- The fonts and the size were improved to avoid harcoded values.
+- To be improve la performance of the images the src was change to srcSet.
+- Changes were made to most of the styling components to improve their responsive behavior.

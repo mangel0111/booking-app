@@ -1,4 +1,4 @@
-import { device } from 'src/utilities/theme';
+import { device, ScreenSize } from 'src/utilities/theme';
 import styled from 'styled-components';
 
 export const HeaderMain = styled.header`
@@ -8,10 +8,13 @@ export const HeaderMain = styled.header`
 
 export const HeaderContainer = styled.nav`
   display: flex;
-  max-width: ${({ theme }) => theme.maxWidth};
   width: 100%;
   margin: 0 auto;
   height: 50px;
+
+  @media ${device.desktop} {
+    max-width: ${ScreenSize.desktop};
+  }
 `;
 
 export const HeaderLinksContainer = styled.ul`

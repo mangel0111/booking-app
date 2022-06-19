@@ -1,10 +1,11 @@
+import { device, ScreenSize } from 'src/utilities/theme';
 import styled from 'styled-components';
 
 export const CarrouselContainer = styled.div`
   overflow: hidden;
   position: relative;
 
-  max-width: ${({ theme }) => theme.maxWidth};
+  max-width: ${ScreenSize.desktop};
   margin: 0 auto;
 `;
 
