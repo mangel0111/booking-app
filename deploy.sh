@@ -10,6 +10,9 @@ npm run build
 cd dist
 
 # commit changes
+git init
+git remote add origin https://github.com/mangel0111/booking-app.git
+git checkout -b gh-pages
 git add -A
 git commit -m 'deploy'
 
