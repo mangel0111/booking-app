@@ -40,4 +40,4 @@ yarn run dev
 - SEO also was improved adding robots.txt, sitemap.xml and the manifest.json.
 - The fonts and the size were improved to avoid harcoded values.
 - To be improve la performance of the images the src was change to srcSet.
-- Changes were made to most of the styling components to improve their responsive behavior.
+- Changes were made to some of the styling components to improve their responsive behavior.

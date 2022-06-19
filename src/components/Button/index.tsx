@@ -6,7 +6,8 @@ const ButtonInput = styled.button`
   color: ${({ theme }) => theme.onSecondaryColor};
   border: none;
   font-size: ${({ theme }) => theme.fontSizes.small};
-  padding: 12px 20px;
+  padding: ${({ theme }) =>
+    `${theme.spacing.space12} ${theme.spacing.space20}`};
   cursor: pointer;
 `;
 

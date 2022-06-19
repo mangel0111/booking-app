@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const MenuContainer = styled.div`
   border-right: 1px solid ${({ theme }) => theme.borderLineColor};
   border-left: 1px solid ${({ theme }) => theme.borderLineColor};
-  padding: 15px;
+  padding: ${({ theme }) => theme.spacing.space16};
 `;
 
 const Menu: FC = () => {

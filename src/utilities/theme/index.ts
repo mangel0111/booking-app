@@ -5,6 +5,19 @@ enum Sizes {
   extraLarge = 'extraLarge',
 }
 
+interface Spaicing {
+  space0: string;
+  space2: string;
+  space4: string;
+  space8: string;
+  space10: string;
+  space12: string;
+  space16: string;
+  space20: string;
+  space24: string;
+  space60: string;
+}
+
 export interface IThemeProps {
   primaryColor: string;
   onPrimaryColor: string;
@@ -22,6 +35,7 @@ export interface IThemeProps {
   fontSizes: {
     [key in Sizes]: string;
   };
+  spacing: Spaicing;
 }
 
 export const theme: IThemeProps = {
@@ -43,6 +57,18 @@ export const theme: IThemeProps = {
     medium: '16px',
     large: '24px',
     extraLarge: '48px',
+  },
+  spacing: {
+    space0: '0px',
+    space2: '2px',
+    space4: '3px',
+    space8: '8px',
+    space10: '10px',
+    space12: '12px',
+    space16: '16px',
+    space20: '20px',
+    space24: '24px',
+    space60: '60px',
   },
 };
 

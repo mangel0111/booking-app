@@ -39,7 +39,7 @@ export const HeaderLinkItem = styled.li<IHeaderLinkItem>`
   color: ${({ theme }) => theme.fontAltColor};
   list-style: none;
   min-width: 55px;
-  padding: 16px;
+  padding: ${({ theme }) => theme.spacing.space16};
   text-align: center;
   cursor: pointer;
 

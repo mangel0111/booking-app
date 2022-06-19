@@ -63,5 +63,5 @@ export const CurrentPositionIndex = styled.div`
   right: 30px;
   background: white;
   font-size: ${({ theme }) => theme.fontSizes.small};
-  padding: 4px;
+  padding: ${({ theme }) => theme.spacing.space4};
 `;

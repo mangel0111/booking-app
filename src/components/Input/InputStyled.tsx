@@ -18,7 +18,7 @@ export const InputField = styled.input`
   font-size: ${({ theme }) => theme.fontSizes.small};
   color: ${({ theme }) => theme.fontColor};
   font-weight: 500;
-  padding: 0;
+  padding: ${({ theme }) => theme.spacing.space0};
 
   ::-webkit-calendar-picker-indicator {
     display: none;

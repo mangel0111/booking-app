@@ -10,7 +10,8 @@ export const DetailsContainer = styled.div`
     #fff 80%,
     #fff 100%
   );
-  padding: 60px 20px;
+  padding: ${({ theme }) =>
+    `${theme.spacing.space60} ${theme.spacing.space20}`};
   text-align: center;
   color: ${({ theme }) => theme.onTertiaryColor};
 `;
@@ -25,7 +26,7 @@ export const DetailsLine = styled.div`
 `;
 
 export const SpecificDetails = styled.div`
-  padding: 10px;
+  padding: ${({ theme }) => theme.spacing.space10};
   border-bottom: 1px solid ${({ theme }) => theme.borderOnTertiaryColor};
   border-top: 1px solid ${({ theme }) => theme.borderOnTertiaryColor};
   width: max-content;
@@ -33,7 +34,8 @@ export const SpecificDetails = styled.div`
 
   span {
     font-size: ${({ theme }) => theme.fontSizes.small};
-    padding: 6px 10px;
+    padding: ${({ theme }) =>
+      `${theme.spacing.space6} ${theme.spacing.space10}`};
     &:not(:last-child) {
       border-right: 1px solid ${({ theme }) => theme.borderOnTertiaryColor};
     }
