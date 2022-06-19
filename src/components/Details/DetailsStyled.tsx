@@ -44,6 +44,13 @@ export const SpecificDetails = styled.div`
   }
 
   @media ${device.mobile} {
-    width: 100%;
+    width: auto;
+    display: flex;
+
+    span {
+      svg {
+        margin: 0 40%;
+      }
+    }
   }
 `;
