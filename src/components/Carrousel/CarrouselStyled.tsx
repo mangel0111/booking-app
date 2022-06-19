@@ -1,4 +1,4 @@
-import { device, ScreenSize } from 'src/utilities/theme';
+import { ScreenSize } from 'src/utilities/theme';
 import styled from 'styled-components';
 
 export const CarrouselContainer = styled.div`
@@ -54,7 +54,7 @@ export const MoveButton = styled.button<IMoveButton>`
 export const CurrentPositionIndex = styled.div`
   display: inline-block;
   text-align: center;
-  border-radius: 50%;
+  border-radius: ${({ theme }) => theme.radius.rounded};
   width: 2.8em;
   height: 2.8em;
   line-height: 2.6em;

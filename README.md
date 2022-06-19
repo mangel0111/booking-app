@@ -41,5 +41,5 @@ yarn run dev
 - The fonts and the size were improved to avoid harcoded values.
 - To be improve la performance of the images the src was change to srcSet.
 - Changes were made to some of the styling components to improve their responsive behavior.
-- The hardcoded padding was removed and not it's taken from the theme, using a Tailwind approach of defining spacing instead.
+- The hardcoded padding, radius were removed and not it's taken from the theme, using a Tailwind approach of defining spacing instead.
 -

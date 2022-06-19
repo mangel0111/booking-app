@@ -18,6 +18,10 @@ interface Spaicing {
   space60: string;
 }
 
+interface Radius {
+  rounded: string;
+}
+
 export interface IThemeProps {
   primaryColor: string;
   onPrimaryColor: string;
@@ -36,6 +40,7 @@ export interface IThemeProps {
     [key in Sizes]: string;
   };
   spacing: Spaicing;
+  radius: Radius;
 }
 
 export const theme: IThemeProps = {
@@ -69,6 +74,9 @@ export const theme: IThemeProps = {
     space20: '20px',
     space24: '24px',
     space60: '60px',
+  },
+  radius: {
+    rounded: '50%',
   },
 };
 
