@@ -255,6 +255,9 @@ Error generating stack: `+o.message+`
   @media ${jr.mobile} {
     width: 100%;
     margin-bottom: 5px;
+    max-width: 240px;
+    min-width: 240px;
+    margin: 20px 55px 0;
 
     button {
       width: 100%;
