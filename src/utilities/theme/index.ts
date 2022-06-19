@@ -48,7 +48,7 @@ export const theme: IThemeProps = {
 
 export enum DeviceSize {
   MOBILE = 460,
-  TABLET = 768,
+  TABLET = 900,
   DESKTOP = 1200,
 }
 
@@ -60,6 +60,6 @@ export const ScreenSize = {
 
 export const device = {
   mobile: `(max-width: ${ScreenSize.mobile}) and (max-device-width: ${ScreenSize.mobile})`,
-  tablet: `(min-width: ${ScreenSize.tablet})`,
+  tablet: `(max-width: ${ScreenSize.tablet}) and (max-device-width: ${ScreenSize.tablet})`,
   desktop: `(min-width: ${ScreenSize.desktop})`,
 };

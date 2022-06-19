@@ -24,6 +24,9 @@ export const HeaderLinksContainer = styled.ul`
   @media ${device.mobile} {
     display: none;
   }
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 interface IHeaderLinkItem {
