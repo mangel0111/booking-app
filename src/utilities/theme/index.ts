@@ -57,7 +57,7 @@ export const theme: IThemeProps = {
   borderOnTertiaryColor: '#e8d1c6',
   borderLineColor: '#f3f3f3',
   borderLineActiveColor: '#fcc346',
-  fontColor: '#0e0e0e',
+  fontColor: '#1d1d1d',
   fontAltColor: '#57575a',
   primaryFontFamily: `'HalyardDisplay', 'Open Sans', 'Helvetica Neue', sans-serif`,
   altFontFamily: `"DomaineDisplayNarrow", "Times New Roman", serif`,
